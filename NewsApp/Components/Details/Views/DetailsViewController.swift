@@ -11,7 +11,6 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
-    @IBOutlet weak var articlePublishedDate: UILabel!
     @IBOutlet weak var articleImageView: UIImageView!
     @IBOutlet weak var contentWrapper: UIView!
     @IBOutlet weak var articleImageViewWrapper: UIView!
@@ -40,6 +39,5 @@ class DetailsViewController: UIViewController {
         articleSource.text = detailsViewModel.article.source.name
         articleTitle.text = detailsViewModel.article.title
         textView.text = detailsViewModel.article.content
-        articlePublishedDate.text = detailsViewModel.article.publishedAt
     }
 }

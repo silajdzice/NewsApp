@@ -31,19 +31,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOM-uW-J3u">
-                                        <rect key="frame" x="12" y="413.5" width="390" height="372.5"/>
+                                        <rect key="frame" x="12" y="405" width="390" height="381"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STA-Zo-FLc">
-                                        <rect key="frame" x="16" y="357" width="382" height="14.5"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gd-Bn-s9K">
                                         <rect key="frame" x="16" y="121" width="382" height="214"/>
                                         <subviews>
@@ -73,14 +67,11 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="nuO-nw-ipe" firstAttribute="leading" secondItem="hdi-c3-s9C" secondAttribute="leading" constant="16" id="1Du-fR-2lJ"/>
-                                    <constraint firstItem="STA-Zo-FLc" firstAttribute="top" secondItem="0gd-Bn-s9K" secondAttribute="bottom" constant="22" id="4kN-mt-pc3"/>
                                     <constraint firstAttribute="bottom" secondItem="FOM-uW-J3u" secondAttribute="bottom" constant="32" id="6jP-l1-7Oh"/>
                                     <constraint firstItem="0gd-Bn-s9K" firstAttribute="leading" secondItem="hdi-c3-s9C" secondAttribute="leading" constant="16" id="BPV-TW-wT7"/>
                                     <constraint firstItem="nuO-nw-ipe" firstAttribute="top" secondItem="hdi-c3-s9C" secondAttribute="top" constant="16" id="EjS-bT-9Se"/>
                                     <constraint firstItem="egL-QY-IVw" firstAttribute="leading" secondItem="hdi-c3-s9C" secondAttribute="leading" constant="16" id="IYN-ax-uv3"/>
                                     <constraint firstItem="FOM-uW-J3u" firstAttribute="leading" secondItem="hdi-c3-s9C" secondAttribute="leading" constant="12" id="KOP-0M-ToE"/>
-                                    <constraint firstItem="STA-Zo-FLc" firstAttribute="leading" secondItem="hdi-c3-s9C" secondAttribute="leading" constant="16" id="PM5-ZZ-ks3"/>
-                                    <constraint firstItem="FOM-uW-J3u" firstAttribute="top" secondItem="STA-Zo-FLc" secondAttribute="bottom" constant="42" id="Pff-TB-mXe"/>
                                     <constraint firstAttribute="trailing" secondItem="nuO-nw-ipe" secondAttribute="trailing" constant="16" id="YH2-rB-juK"/>
                                     <constraint firstAttribute="trailing" secondItem="FOM-uW-J3u" secondAttribute="trailing" constant="12" id="dzB-5l-xnF"/>
                                     <constraint firstItem="0gd-Bn-s9K" firstAttribute="top" secondItem="egL-QY-IVw" secondAttribute="bottom" constant="42" id="epj-CZ-Uhi"/>
@@ -88,7 +79,7 @@
                                     <constraint firstAttribute="trailing" secondItem="0gd-Bn-s9K" secondAttribute="trailing" constant="16" id="n6l-ZR-A1T"/>
                                     <constraint firstItem="egL-QY-IVw" firstAttribute="top" secondItem="nuO-nw-ipe" secondAttribute="bottom" constant="16" id="pal-BP-2NF"/>
                                     <constraint firstAttribute="trailing" secondItem="egL-QY-IVw" secondAttribute="trailing" constant="16" id="rhg-Vv-4d0"/>
-                                    <constraint firstAttribute="trailing" secondItem="STA-Zo-FLc" secondAttribute="trailing" constant="16" id="rrr-j6-cbZ"/>
+                                    <constraint firstItem="FOM-uW-J3u" firstAttribute="top" secondItem="0gd-Bn-s9K" secondAttribute="bottom" constant="70" id="wQD-At-7Y7"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -104,7 +95,6 @@
                     <connections>
                         <outlet property="articleImageView" destination="Z6X-eA-ArB" id="9cK-i2-c5C"/>
                         <outlet property="articleImageViewWrapper" destination="0gd-Bn-s9K" id="CMi-tY-uVW"/>
-                        <outlet property="articlePublishedDate" destination="STA-Zo-FLc" id="guo-jx-2LC"/>
                         <outlet property="articleSource" destination="nuO-nw-ipe" id="zfd-0C-6of"/>
                         <outlet property="articleTitle" destination="egL-QY-IVw" id="Ita-fH-AK7"/>
                         <outlet property="contentWrapper" destination="hdi-c3-s9C" id="0dD-tb-Jqt"/>

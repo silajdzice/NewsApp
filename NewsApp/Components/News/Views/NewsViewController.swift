@@ -26,16 +26,11 @@ class NewsViewController: UIViewController {
         super.viewDidLoad()
         newsViewModel.fetchNews()
         setupDelegates()
-        setupView()
     }
     
     required init?(coder aDecoder: NSCoder) {
         newsViewModel = NewsViewModel.build()
         super.init(coder: aDecoder)
-    }
-    
-    private func setupView() {
-        searchBar.returnKeyType = .done
     }
     
     private func setupDelegates(){

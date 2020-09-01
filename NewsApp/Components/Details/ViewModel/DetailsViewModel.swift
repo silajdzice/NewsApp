@@ -16,5 +16,4 @@ class DetailsViewModel: BaseViewModel{
         return DetailsViewModel(service: NetworkService.sharedInstance())
     }
     
-    
 }
