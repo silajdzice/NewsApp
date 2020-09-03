@@ -46,6 +46,9 @@
 		E197715724FC270A002B306D /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E197715624FC270A002B306D /* DetailsViewModel.swift */; };
 		E1BB0B7F24FB0146002F730A /* NewsViewModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BB0B7E24FB0146002F730A /* NewsViewModelOutput.swift */; };
 		E1BB0B8124FB055E002F730A /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BB0B8024FB055E002F730A /* UIViewExt.swift */; };
+		E1D0676A2500FC41006A7F1F /* RealmHistoryArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D067692500FC41006A7F1F /* RealmHistoryArticles.swift */; };
+		E1D0676E25010E8B006A7F1F /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D0676D25010E8B006A7F1F /* Connectivity.swift */; };
+		E1D06770250116C2006A7F1F /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D0676F250116C2006A7F1F /* UIViewControllerExt.swift */; };
 		E1DDE87225002EB4004D722D /* RealmNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DDE87125002EB4004D722D /* RealmNews.swift */; };
 		E22CE0DE49FCABDA7117C0A8 /* Pods_NewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 193F734D9092974A5E103928 /* Pods_NewsApp.framework */; };
 /* End PBXBuildFile section */
@@ -118,6 +121,9 @@
 		E197715624FC270A002B306D /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		E1BB0B7E24FB0146002F730A /* NewsViewModelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModelOutput.swift; sourceTree = "<group>"; };
 		E1BB0B8024FB055E002F730A /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		E1D067692500FC41006A7F1F /* RealmHistoryArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHistoryArticles.swift; sourceTree = "<group>"; };
+		E1D0676D25010E8B006A7F1F /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		E1D0676F250116C2006A7F1F /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		E1DDE87125002EB4004D722D /* RealmNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmNews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +205,7 @@
 		E178A5E724FA974100E9F99B /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				E1D0676B25010E66006A7F1F /* Utils */,
 				E1DDE86F25002E90004D722D /* RealmModels */,
 				E178A63024FAACC000E9F99B /* Constants */,
 				E178A62124FA9DD300E9F99B /* Generics */,
@@ -283,6 +290,7 @@
 				E1BB0B8024FB055E002F730A /* UIViewExt.swift */,
 				E188299A24FE94C700BFB9DF /* UserDefaultsExt.swift */,
 				E188299F24FECD2100BFB9DF /* UIColorExt.swift */,
+				E1D0676F250116C2006A7F1F /* UIViewControllerExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -424,9 +432,26 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		E1D067682500FC24006A7F1F /* RealmHistoryArticles */ = {
+			isa = PBXGroup;
+			children = (
+				E1D067692500FC41006A7F1F /* RealmHistoryArticles.swift */,
+			);
+			path = RealmHistoryArticles;
+			sourceTree = "<group>";
+		};
+		E1D0676B25010E66006A7F1F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E1D0676D25010E8B006A7F1F /* Connectivity.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		E1DDE86F25002E90004D722D /* RealmModels */ = {
 			isa = PBXGroup;
 			children = (
+				E1D067682500FC24006A7F1F /* RealmHistoryArticles */,
 				E1DDE87025002EA4004D722D /* RealmNews */,
 			);
 			path = RealmModels;
@@ -710,9 +735,12 @@
 				E178A63424FAACF800E9F99B /* StringExt.swift in Sources */,
 				E1BB0B8124FB055E002F730A /* UIViewExt.swift in Sources */,
 				E178A65624FAEDD900E9F99B /* NewsService.swift in Sources */,
+				E1D0676A2500FC41006A7F1F /* RealmHistoryArticles.swift in Sources */,
 				E178A63F24FAC08500E9F99B /* News.swift in Sources */,
+				E1D0676E25010E8B006A7F1F /* Connectivity.swift in Sources */,
 				E178A61D24FA9CA000E9F99B /* MainViewController.swift in Sources */,
 				E1BB0B7F24FB0146002F730A /* NewsViewModelOutput.swift in Sources */,
+				E1D06770250116C2006A7F1F /* UIViewControllerExt.swift in Sources */,
 				E190EFDA24FBF534004A92AF /* HotNewsCollectionView.swift in Sources */,
 				E1DDE87225002EB4004D722D /* RealmNews.swift in Sources */,
 				E178A62324FA9DE200E9F99B /* UITableViewGenerics.swift in Sources */,

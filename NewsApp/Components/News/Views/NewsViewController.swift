@@ -18,28 +18,32 @@ class NewsViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var newsViewModel: NewsViewModel
+    let realm = try! Realm()
     let heightForCell: CGFloat = 140
     let colorArray = [UIColor.systemTeal, UIColor.systemYellow, UIColor.systemRed, UIColor.systemPurple, UIColor.systemOrange]
     var searchActive = false
-    
+    var cashedNews = [NewsSource.Article]()
+    var isConnectedToInternet = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         newsViewModel.fetchNews()
         setupDelegates()
         activityIndicator.startAnimating()
-        
-        let realm = try! Realm()
-        let allUploadingObjects = realm.objects(RealmArticle.self)
-
-        try! realm.write {
-            realm.delete(allUploadingObjects)
-        }
+        deleteOldArticles()
     }
     
     required init?(coder aDecoder: NSCoder) {
         newsViewModel = NewsViewModel.build()
         super.init(coder: aDecoder)
+    }
+    
+    private func setupUI() {
+        if !Connectivity.isConnectedToInternet {
+            isConnectedToInternet = false
+            renderCashedUI()
+        }
     }
     
     private func setupDelegates(){
@@ -49,27 +53,69 @@ class NewsViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         searchBar.delegate = self
-
+        
         tableView.registerCell(ofType: NewsTableViewCell.self)
     }
+    
     
     private func goToDetails(article: NewsSource.Article) {
         let storyboard = UIStoryboard.detailsStoryboard()
         let detailsVC: DetailsViewController = storyboard.instantiateViewController(identifier: "DetailsViewController")
         detailsVC.detailsViewModel.article = article
+        if newsViewModel.news.count == 0 {
+            detailsVC.shouldSaveToDB = false
+        }
         self.present(detailsVC, animated: true)
+    }
+    
+    private func deleteOldArticles() {
+        let sevenDaysAgo = Calendar.current.date(byAdding: .day, value: -7, to: Date())
+        if let date = sevenDaysAgo {
+            let oldObjects = realm.objects(RealmHistoryArticles.self).filter("date < %@", date)
+            try! realm.write {
+                realm.delete(oldObjects)
+            }
+        }
+    }
+    
+    private func renderCashedUI() {
+        let articles = realm.objects(RealmArticle.self)
+        for article in articles {
+            var item = NewsSource.Article()
+            
+            item.content = article.content
+            item.description = article.description
+            item.title = article.title
+            item.urlToImage = URL(string: article.urlToImage!)
+            item.source.name = article.source.first?.name
+            
+            cashedNews.append(item)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: {
+            self.hideCollectionView()
+            self.activityIndicator.stopAnimating()
+            self.tableView.reloadData()
+        })
     }
 }
 
 extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if !isConnectedToInternet {
+            return cashedNews.count
+        }
         return newsViewModel.news.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueCell(ofType: NewsTableViewCell.self)
-        let item = newsViewModel.news[indexPath.row]
-        cell.setupCell(item: item)
+        if !isConnectedToInternet {
+            let item = cashedNews[indexPath.row]
+            cell.setupCell(item: item)
+        } else {
+            let item = newsViewModel.news[indexPath.row]
+            cell.setupCell(item: item)
+        }
         return cell
     }
     
@@ -78,7 +124,14 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        goToDetails(article: newsViewModel.news[indexPath.row])
+        if !isConnectedToInternet {
+            let item = cashedNews[indexPath.row]
+            goToDetails(article: item)
+        } else {
+            let item = newsViewModel.news[indexPath.row]
+            goToDetails(article: item)
+        }
+        
     }
 }
 
@@ -135,10 +188,16 @@ extension NewsViewController {
 extension NewsViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchValue = searchBar.text else {return}
+        if !isConnectedToInternet {
+            self.searchBar.endEditing(true)
+            showAlertDialog(alertText: Constants.warrning, alertMessage: Constants.noValidConnection)
+            
+            return
+        }
         if searchValue == "" {
             searchActive = false
             self.searchBar.endEditing(true)
-
+            
             showCollectionView()
             
             newsViewModel.fetchNews()

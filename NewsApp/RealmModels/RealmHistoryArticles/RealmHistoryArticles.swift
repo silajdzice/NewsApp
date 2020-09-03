@@ -1,15 +1,16 @@
 //
-//  RealmNews.swift
+//  RealmHistoryArticles.swift
 //  NewsApp
 //
-//  Created by Edhem Silajdzic on 02/09/2020.
+//  Created by Edhem Silajdzic on 03/09/2020.
 //  Copyright © 2020 Edhem Silajdzic. All rights reserved.
 //
 
+import Foundation
 import RealmSwift
 
-class RealmArticle: Object {
-    let source = List<RealmSource>()
+class RealmHistoryArticles: Object {
+    let source = List<RealmHistoryArticlesSource>()
     @objc dynamic var author: String? = ""
     @objc dynamic var title: String? = ""
     @objc dynamic var arDescription: String? = ""
@@ -17,12 +18,11 @@ class RealmArticle: Object {
     @objc dynamic var urlToImage: String? = ""
     @objc dynamic var publishedAt: String? = ""
     @objc dynamic var content: String? = ""
-
+    @objc dynamic var date: Date? = nil
 }
 
 
-class RealmSource: Object {
+class RealmHistoryArticlesSource: Object {
     @objc dynamic var id: String? = ""
     @objc dynamic var name: String? = ""
 }
-

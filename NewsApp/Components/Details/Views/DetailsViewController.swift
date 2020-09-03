@@ -21,6 +21,7 @@ class DetailsViewController: UIViewController {
     
     var detailsViewModel: DetailsViewModel
     let realm = try! Realm()
+    var shouldSaveToDB = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,19 +35,26 @@ class DetailsViewController: UIViewController {
     }
     
     private func createAndSaveArticle(){
-        let article = RealmArticle()
-        
-        article.arDescription = detailsViewModel.article.description
-        article.title = detailsViewModel.article.title
-        if let source = article.source {
-            source.name = detailsViewModel.article.source.name
+        if shouldSaveToDB {
+            let article = RealmHistoryArticles()
+            realm.beginWrite()
+
+            article.arDescription = detailsViewModel.article.description
+            article.title = detailsViewModel.article.title
+            
+            article.urlToImage = detailsViewModel.article.urlToImage?.absoluteString
+            article.content = detailsViewModel.article.content
+            
+            let date = Date()
+            article.date = date
+            
+            let sources = RealmHistoryArticlesSource()
+            sources.name = detailsViewModel.article.source.name
+            article.source.append(sources)
+            
+            realm.add(article)
+            try! realm.commitWrite()
         }
-        article.urlToImage = detailsViewModel.article.urlToImage?.absoluteString
-        article.content = detailsViewModel.article.content
-        realm.beginWrite()
-        
-        realm.add(article)
-        try! realm.commitWrite()
     }
     
     func setupView() {

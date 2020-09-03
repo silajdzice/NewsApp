@@ -22,15 +22,21 @@ class HistoryViewController: UIViewController {
         super.viewDidLoad()
         setupDelegates()
         
-        render()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        renderUI()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    private func render() {
-        let articles = realm.objects(RealmArticle.self)
+    private func renderUI() {
+        news.removeAll()
+        let articles = realm.objects(RealmHistoryArticles.self)
         for article in articles {
             var item = NewsSource.Article()
             
@@ -38,12 +44,11 @@ class HistoryViewController: UIViewController {
             item.description = article.description
             item.title = article.title
             item.urlToImage = URL(string: article.urlToImage!)
-            if let source = article.source {
-                item.source.name = source.name
-            }
-            
+            item.source.name = article.source.first?.name
+
             news.append(item)
         }
+        tableView.reloadData()
     }
     
     private func setupDelegates(){
@@ -57,6 +62,7 @@ class HistoryViewController: UIViewController {
         let storyboard = UIStoryboard.detailsStoryboard()
         let detailsVC: DetailsViewController = storyboard.instantiateViewController(identifier: "DetailsViewController")
         detailsVC.detailsViewModel.article = article
+        detailsVC.shouldSaveToDB = false
         self.present(detailsVC, animated: true)
     }
 }

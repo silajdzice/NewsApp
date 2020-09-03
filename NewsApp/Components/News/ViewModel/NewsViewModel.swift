@@ -8,9 +8,11 @@
 
 import Foundation
 import Alamofire
+import RealmSwift
 
 class NewsViewModel: BaseViewModel {
     
+    let realm = try! Realm()
     var news = [NewsSource.Article]()
     var hotNews = [NewsSource.Article]()
     var output: NewsViewModelOutput?
@@ -31,6 +33,36 @@ class NewsViewModel: BaseViewModel {
         service.networkService.delegate = self
         service.getEducationsWith(type: API.Endpoint.everything.endpoint,NewsSource.self, q: value)
     }
+    
+    func casheArticles(items: NewsSource) {
+        deleteNewsFromCashe()
+        
+        realm.beginWrite()
+        for item in items.articles {
+            let article = RealmArticle()
+            article.arDescription = item.description
+            article.title = item.title
+            
+            article.urlToImage = item.urlToImage?.absoluteString
+            article.content = item.content
+            
+            let sources = RealmSource()
+            sources.name = item.source.name
+            article.source.append(sources)
+            
+            realm.add(article)
+        }
+        
+        try! realm.commitWrite()
+    }
+    
+    private func deleteNewsFromCashe() {
+        let allNewsObjects = realm.objects(RealmArticle.self)
+
+        try! realm.write {
+            realm.delete(allNewsObjects)
+        }
+    }
 }
 
 extension NewsViewModel: ResponseServiceDelegate {
@@ -42,6 +74,7 @@ extension NewsViewModel: ResponseServiceDelegate {
             for (index, article) in articles.enumerated() {
                 let item = NewsSource.Article(source: article.source, author: article.author, title: article.title, description: article.description, url: article.url, urlToImage: article.urlToImage, publishedAt: article.publishedAt, content: article.content)
                 if !isSearchCalled {
+                    casheArticles(items: newsResponse)
                     if index < 5 {
                         hotNews.append(item)
                     } else {
