@@ -13,7 +13,6 @@ class NewsService {
     
     let networkService = NetworkService.sharedInstance()
     let countryCode = UserDefaults.standard.getRegionCode()
-    //let countryCodeForSearch = UserDefaults.standard.getRegionCodeForSearch()
     
     init() {}
 
@@ -49,7 +48,7 @@ class NewsService {
         }
         
 
-            urlComponents.queryItems = urlQueryItems
+        urlComponents.queryItems = urlQueryItems
         let endpoint = API.baseUrl + urlComponents.url!.absoluteString
         networkService.request(endpoint: endpoint, responseType: response.self, httpMethod: .get)
     }
