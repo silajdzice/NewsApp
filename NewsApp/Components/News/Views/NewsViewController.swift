@@ -86,7 +86,9 @@ class NewsViewController: UIViewController {
             item.content = article.content
             item.description = article.description
             item.title = article.title
-            item.urlToImage = URL(string: article.urlToImage!)
+            if let url = article.urlToImage {
+                item.urlToImage = URL(string: url)
+            }
             item.source.name = article.source.first?.name
             
             cashedNews.append(item)
