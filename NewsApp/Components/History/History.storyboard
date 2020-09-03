@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--History View Controller-->
+        <scene sceneID="fFX-uQ-uxq">
+            <objects>
+                <viewController storyboardIdentifier="HistoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BxP-sc-h6b" customClass="HistoryViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FIS-fH-Bt4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My history" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEO-TT-7aP">
+                                <rect key="frame" x="16" y="66" width="94.5" height="23"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UIY-XQ-yNc">
+                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="UIY-XQ-yNc" firstAttribute="top" secondItem="F2J-vT-g5f" secondAttribute="top" constant="60" id="4iu-HK-bWD"/>
+                            <constraint firstItem="F2J-vT-g5f" firstAttribute="bottom" secondItem="UIY-XQ-yNc" secondAttribute="bottom" id="AiL-zL-iyJ"/>
+                            <constraint firstItem="gEO-TT-7aP" firstAttribute="top" secondItem="F2J-vT-g5f" secondAttribute="top" constant="22" id="EBl-b4-Wh8"/>
+                            <constraint firstItem="F2J-vT-g5f" firstAttribute="trailing" secondItem="UIY-XQ-yNc" secondAttribute="trailing" id="KYV-GV-TXU"/>
+                            <constraint firstItem="UIY-XQ-yNc" firstAttribute="leading" secondItem="F2J-vT-g5f" secondAttribute="leading" id="oQ0-Ch-9i8"/>
+                            <constraint firstItem="gEO-TT-7aP" firstAttribute="leading" secondItem="F2J-vT-g5f" secondAttribute="leading" constant="16" id="ouG-Aw-tRE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="F2J-vT-g5f"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="UIY-XQ-yNc" id="A1r-PZ-dVS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R6n-pg-Pcj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-62" y="119"/>
+        </scene>
+    </scenes>
+</document>

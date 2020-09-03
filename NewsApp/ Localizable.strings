@@ -1,0 +1,11 @@
+/* 
+   Localizable.strings
+  NewsApp
+
+  Created by Edhem Silajdzic on 29/08/2020.
+  Copyright © 2020 Edhem Silajdzic. All rights reserved.
+*/
+"News" = "News";
+"My history" = "My history";
+"Warning" = "Warning";
+"No valid internet connection!" = "No valid internet connection!";
