@@ -8,13 +8,14 @@
 
 import Foundation
 import UIKit
-
+import RealmSwift
 class NewsViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var newsViewModel: NewsViewModel
     let heightForCell: CGFloat = 140
@@ -26,6 +27,14 @@ class NewsViewController: UIViewController {
         super.viewDidLoad()
         newsViewModel.fetchNews()
         setupDelegates()
+        activityIndicator.startAnimating()
+        
+        let realm = try! Realm()
+        let allUploadingObjects = realm.objects(RealmArticle.self)
+
+        try! realm.write {
+            realm.delete(allUploadingObjects)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -143,6 +152,7 @@ extension NewsViewController: UISearchBarDelegate {
 
 extension NewsViewController: NewsViewModelOutput {
     func reload() {
+        activityIndicator.stopAnimating()
         tableView.reloadData()
         collectionView.reloadData()
     }

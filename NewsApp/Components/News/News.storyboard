@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WWo-dU-WPG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WWo-dU-WPG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -132,16 +132,21 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
                             </searchBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="K9o-K0-SFy">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="XfH-8Z-QnI" firstAttribute="leading" secondItem="Agq-sR-gsB" secondAttribute="leading" id="3Sq-xO-uFm"/>
                             <constraint firstItem="eg4-A9-nBI" firstAttribute="trailing" secondItem="KfO-Mk-5q0" secondAttribute="trailing" id="F8e-kI-ttf"/>
+                            <constraint firstItem="K9o-K0-SFy" firstAttribute="centerY" secondItem="Agq-sR-gsB" secondAttribute="centerY" id="Fad-Ni-aqu"/>
                             <constraint firstItem="kgf-oa-72P" firstAttribute="leading" secondItem="KfO-Mk-5q0" secondAttribute="leading" id="FdR-fH-eJ4"/>
                             <constraint firstItem="eg4-A9-nBI" firstAttribute="leading" secondItem="KfO-Mk-5q0" secondAttribute="leading" constant="8" id="Jx4-rA-hL8"/>
                             <constraint firstItem="KfO-Mk-5q0" firstAttribute="trailing" secondItem="kgf-oa-72P" secondAttribute="trailing" id="LPc-MW-u4q"/>
                             <constraint firstItem="KfO-Mk-5q0" firstAttribute="bottom" secondItem="kgf-oa-72P" secondAttribute="bottom" id="OmN-jh-mAf"/>
                             <constraint firstItem="eg4-A9-nBI" firstAttribute="top" secondItem="XfH-8Z-QnI" secondAttribute="bottom" constant="32" id="PSl-qh-vQF"/>
+                            <constraint firstItem="K9o-K0-SFy" firstAttribute="centerX" secondItem="Agq-sR-gsB" secondAttribute="centerX" id="TFI-bD-6Ny"/>
                             <constraint firstItem="kgf-oa-72P" firstAttribute="top" secondItem="eg4-A9-nBI" secondAttribute="bottom" constant="20" id="XJK-1b-YLc"/>
                             <constraint firstItem="XfH-8Z-QnI" firstAttribute="top" secondItem="KfO-Mk-5q0" secondAttribute="top" id="YEq-Ki-olY"/>
                             <constraint firstItem="k74-VX-SSQ" firstAttribute="leading" secondItem="KfO-Mk-5q0" secondAttribute="leading" constant="10" id="akK-Wk-kLO"/>
@@ -151,6 +156,7 @@
                         <viewLayoutGuide key="safeArea" id="KfO-Mk-5q0"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="K9o-K0-SFy" id="3F5-9b-mRE"/>
                         <outlet property="collectionView" destination="eg4-A9-nBI" id="t5f-Tl-HWo"/>
                         <outlet property="searchBar" destination="XfH-8Z-QnI" id="VE7-Xq-FBw"/>
                         <outlet property="tableView" destination="kgf-oa-72P" id="AIZ-J3-eSe"/>

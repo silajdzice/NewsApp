@@ -34,6 +34,8 @@ class NewsTableViewCell: UITableViewCell {
     func setupCell(item: NewsSource.Article) {
         if let imageUrl = item.urlToImage {
             newsImageView.setThumbnailFrom("\(imageUrl)")
+        } else {
+            newsImageView.image = UIImage(named: "placeHolder")
         }
         newsSource.text = item.source.name
         newsTitle.text = item.title

@@ -14,14 +14,14 @@ struct NewsSource: Decodable {
     let articles: [Article]
 
     struct Article: Decodable {
-        let source: Source
-        let author: String?
-        let title: String?
-        let description: String?
-        let url: URL?
-        let urlToImage: URL?
-        let publishedAt: String?
-        let content: String?
+        var source = Source()
+        var author: String?
+        var title: String?
+        var description: String?
+        var url: URL?
+        var urlToImage: URL?
+        var publishedAt: String?
+        var content: String?
         
         init(source: Source? = nil, author: String? = nil,title: String? = nil, description: String? = nil, url: URL? = nil, urlToImage: URL? = nil, publishedAt: String? = nil, content: String? = nil) {
             self.source = source ?? NewsSource.Article.Source.init()
@@ -36,7 +36,7 @@ struct NewsSource: Decodable {
         
         struct Source: Decodable {
             let id: String?
-            let name: String?
+            var name: String?
             
             init(id: String? = nil, name: String? = nil) {
                 self.id = id

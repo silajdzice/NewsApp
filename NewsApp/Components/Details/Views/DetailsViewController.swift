@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 class DetailsViewController: UIViewController {
     
@@ -19,10 +20,12 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     
     var detailsViewModel: DetailsViewModel
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        createAndSaveArticle()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -30,11 +33,29 @@ class DetailsViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
+    private func createAndSaveArticle(){
+        let article = RealmArticle()
+        
+        article.arDescription = detailsViewModel.article.description
+        article.title = detailsViewModel.article.title
+        if let source = article.source {
+            source.name = detailsViewModel.article.source.name
+        }
+        article.urlToImage = detailsViewModel.article.urlToImage?.absoluteString
+        article.content = detailsViewModel.article.content
+        realm.beginWrite()
+        
+        realm.add(article)
+        try! realm.commitWrite()
+    }
+    
     func setupView() {
         contentWrapper.setGradientBackground(.bottomDetailsBackgroundColor, .topDetailsBackgroundColor)
         
         if let imageUrl = detailsViewModel.article.urlToImage {
             articleImageView.setThumbnailFrom("\(imageUrl)")
+        } else {
+            articleImageView.image = UIImage(named: "placeHolder")
         }
         articleSource.text = detailsViewModel.article.source.name
         articleTitle.text = detailsViewModel.article.title

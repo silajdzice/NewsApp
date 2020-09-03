@@ -13,6 +13,8 @@ import Kingfisher
 extension UIImageView {
     func setThumbnailFrom(_ url: String) {
         let urlImage = URL(string: url)
-        self.kf.setImage(with: urlImage)
+        self.kf.indicatorType = .activity
+        let image = UIImage(named: "profilePlaceHolder")
+        self.kf.setImage(with: urlImage, placeholder: image)
     }
 }
