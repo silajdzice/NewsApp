@@ -25,18 +25,6 @@ extension UserDefaults {
         set(value, forKey: UserDefaultKeys.regionCode.rawValue)
         synchronize()
     }
-    
-//    func getRegionCodeForSearch() -> String {
-//        if let token = string(forKey: UserDefaultKeys.regionCodeForSearch.rawValue) {
-//            return token
-//        }
-//        return ""
-//    }
-//    
-//    func setRegionCodeForSearch(value: String?) {
-//        set(value, forKey: UserDefaultKeys.regionCodeForSearch.rawValue)
-//        synchronize()
-//    }
 }
 
 /**
