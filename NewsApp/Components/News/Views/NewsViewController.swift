@@ -170,7 +170,7 @@ extension NewsViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
 //MARK: Animations:
 extension NewsViewController {
-    private func hideCollectionView() {
+     func hideCollectionView() {
         UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseOut, animations: {
             self.collectionView.isHidden = true
             self.tableViewTopConstraint.constant = -266

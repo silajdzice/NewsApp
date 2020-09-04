@@ -1,0 +1,266 @@
+{
+    "status": "ok",
+    "totalResults": 38,
+    "articles": [
+        {
+            "source": {
+                "id": "googlenews",
+                "name": "Google News"
+            },
+            "author": "",
+            "title": "NHL Highlights | 2nd Round, Game 6: Golden Knights vs. Canucks  Sept 3, 2020  SPORTSNET",
+            "description": "null",
+            "url": "https://news.google.com/__i/rss/rd/articles/CBMiK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9WjdjYW93dU53MTTSAQA?oc=5",
+            "urlToImage": null,
+            "publishedAt": "20200904T04:46:44Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Nintendo Life"
+            },
+            "author": "Nintendo Life",
+            "title": "Super Mario 3D World On Switch Is A Lot Faster Than The Wii U Original  Nintendo Life",
+            "description": "And it looks amazing",
+            "url": "https://www.nintendolife.com/news/2020/09/super_mario_3d_world_on_switch_is_a_lot_faster_than_the_wii_u_original",
+            "urlToImage": "https://images.nintendolife.com/c255dbf92b159/1280x720.jpg",
+            "publishedAt": "20200904T04:45:00Z",
+            "content": "No, your eyes aren't playing tricks on you  Super Mario 3D World on the Switch does indeed run faster than its Wii U counterpart. It's apparently got nothing to do with frame rate or technical perfo… [+608 chars]"
+        },
+        {
+            "source": {
+                "id": "cnn",
+                "name": "CNN"
+            },
+            "author": "Paul LeBlanc and Nikki Carvajal, CNN",
+            "title": "Trump angrily denies report that he denigrated US service members  CNN",
+            "description": "President Donald Trump on Thursday forcefully denied a report in The Atlantic magazine that he had disparaged US service members killed in battle and chose to skip a ceremony honoring veterans.",
+            "url": "https://www.cnn.com/2020/09/04/politics/trumpservicemembersceremony/index.html",
+            "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/200903112556trumpworstjobsreportsupertease.jpg",
+            "publishedAt": "20200904T04:24:00Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": "reuters",
+                "name": "Reuters"
+            },
+            "author": "Lucia Mutikani",
+            "title": "U.S. job growth seen slowing in August, unemployment rate falling below 10%  Reuters",
+            "description": "U.S. job growth likely slowed further in August as financial assistance from the government ran out, threatening the economy's recovery from the COVID19 recession.",
+            "url": "https://www.reuters.com/article/ususaeconomyidUSKBN25V0FO",
+            "urlToImage": "https://s4.reutersmedia.net/resources/r/?m=02&d=20200904&t=2&i=1532159355&w=1200&r=LYNXMPEG8308Y",
+            "publishedAt": "20200904T04:07:00Z",
+            "content": "WASHINGTON (Reuters)  U.S. job growth likely slowed further in August as financial assistance from the government ran out, threatening the economy’s recovery from the COVID19 recession. \r\nThe Labor… [+5290 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "New York Times"
+            },
+            "author": "Mike Baker, Adam Goldman, Katie Benner",
+            "title": "Michael Forest Reinoehl, Suspect in Portland Shooting, Is Killed by Officers  The New York Times",
+            "description": "Law enforcement agents killed Michael Forest Reinoehl while trying to arrest him, four officials said. He was being investigated in the fatal shooting of a supporter of a farright group.",
+            "url": "https://www.nytimes.com/2020/09/03/us/michaelreinoehlarrestportlandshooting.html",
+            "urlToImage": "https://static01.nyt.com/images/2020/10/03/us/politics/03portlandsuspect4/merlin_176554755_1ff9804efe874b26b92776355a310661facebookJumbo.jpg",
+            "publishedAt": "20200904T03:26:00Z",
+            "content": "I am 100% ANTIFA all the way! he posted on Instagram in June, referring to a loose collection of activists that have mobilized to oppose groups they see as fascist or racist. I am willing to fight fo… [+2304 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "ESPN"
+            },
+            "author": "Tim Bontemps",
+            "title": "Jaylen Brown calls Celtics' lastsecond loss to Raptors a 'disgrace'  ESPN",
+            "description": "Celtics forward Jaylen Brown didn't attempt to hide his disgust after Boston allowed Toronto to win on a lastsecond shot by OG Anunoby and get the Raptors back into the semifinal series.",
+            "url": "https://www.espn.com/nba/story/_/id/29806312/jaylenbrowncallscelticslastsecondlossraptorsdisgrace",
+            "urlToImage": "https://a2.espncdn.com/combiner/i?img=%2Fphoto%2F2020%2F0901%2Fr739331_1296x729_16%2D9.jpg",
+            "publishedAt": "20200904T03:19:45Z",
+            "content": "LAKE BUENA VISTA, Fla.  The Boston Celtics were 0.5 seconds away from taking a commanding 30 lead in their Eastern Conference semifinal series against the defending champion Toronto Raptors.\r\nBut … [+3849 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Daily Beast"
+            },
+            "author": "Allison Quinn",
+            "title": "Trump 'Swears on Whatever' He Never Called Slain Soldiers 'Losers'  Daily Beast",
+            "description": "The president also denies dissing John McCain and takes credit for his “first class funeral.”",
+            "url": "https://www.thedailybeast.com/trumpswearsonwhateverhenevercalledsoldierslosers",
+            "urlToImage": "https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_2519,w_4480,x_0,y_416/dpr_2.0/c_limit,w_740/fl_lossy,q_auto/v1599188451/GettyImages1228332693_bctzn7",
+            "publishedAt": "20200904T03:12:53Z",
+            "content": "President Trump says hes ready to swear on whatever that he never called slain American service members losers or dissed Sen. John McCain. In latenight tweets on Thursday, the president claimed a st… [+1237 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Deadline"
+            },
+            "author": "Nellie Andreeva",
+            "title": "‘Shameless’ Starts Filming Final Season, WarnerMedia’s Ann Sarnoff Reveals, Talks COVID19 Impact On TV Production & More  Deadline",
+            "description": "Two more Warner Bros. Television TV series, both from John Wells Prods., are resuming production in Los Angeles next week. Shameless is set to start filming its 11th and final season on Sept. 8; TNT’s Animal Kingdom will begin shooting Season 5 on Sept. 7. Th…",
+            "url": "https://deadline.com/2020/09/shamelessstartsfinalseasonwarnermediaannsarnoffcovid19impactonproductionanimalkingdommomsusanrovner1234570623/",
+            "urlToImage": "https://pmcdeadline2.files.wordpress.com/2019/08/shamelessseason10e1564773352457.jpg?w=1024",
+            "publishedAt": "20200904T03:08:00Z",
+            "content": "Two more Warner Bros. Television TV series, both from John Wells Prods., are resuming production in Los Angeles next week. Shameless is set to start filming its 11th and final season on Sept. 8; TNT’… [+3463 chars]"
+        },
+        {
+            "source": {
+                "id": "googlenews",
+                "name": "Google News"
+            },
+            "author": null,
+            "title": "U.S. tells states to prepare for COVID19 vaccine  Reuters",
+            "description": null,
+            "url": "https://news.google.com/__i/rss/rd/articles/CBMiK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9ZThvSXM2Q2trQ0HSAQA?oc=5",
+            "urlToImage": null,
+            "publishedAt": "20200904T03:01:31Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": "foxnews",
+                "name": "Fox News"
+            },
+            "author": "Brooke Singman",
+            "title": "Salon owner who tangled with Pelosi responds to Trump's call for her to run House  Fox News",
+            "description": "EXCLUSIVE: The owner of the hair salon House Speaker Nancy Pelosi claims “set” her up responded to President Trump’s calls for her to “lead” the House of Representatives Thursday night in an exclusive interview with Fox News.",
+            "url": "https://www.foxnews.com/politics/hairsalonownerrespondstotrumpscallsforhertoleadthehousethehouseimfocusedonrightnowisthehousewithtwolittlegirlsunder10",
+            "urlToImage": "https://cfimages.useast1.prod.boltdns.net/v1/static/694940094001/6cd2e05557d04c0d888738151df2449f/62345b6eec0c44e598b938692c1a10ca/1280x720/match/image.jpg",
+            "publishedAt": "20200904T02:41:24Z",
+            "content": "EXCLUSIVE: She's a salon owner and a single mom, and Erica Kious told Fox News Thursday she just may not be able to work in a new assignment from President Trump  Speaker of the House.\r\nAfter Kious … [+2639 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "BBC News"
+            },
+            "author": "https://www.facebook.com/bbcnews",
+            "title": "Batman filming paused after Robert Pattinson 'tests positive for coronavirus'  BBC News",
+            "description": "Lead actor Robert Pattinson has tested positive for coronavirus, according to US media reports.",
+            "url": "https://www.bbc.com/news/uk54022220",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/3C8A/production/_107189451_hi054338739.jpg",
+            "publishedAt": "20200904T02:05:27Z",
+            "content": "Image copyrightAFP/Getty ImagesImage caption\r\n Vanity Fair said actor Robert Pattinson has tested positive for coronavirus  days after shooting resumed\r\nFilming for The Batman has been suspended aga… [+1170 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "MarketWatch"
+            },
+            "author": "Mike Murphy",
+            "title": "U.S. stock futures dip after ugly day on Wall Street  MarketWatch",
+            "description": "",
+            "url": "https://www.marketwatch.com/story/usstockfuturessinkafteruglydayonwallstreet20200903",
+            "urlToImage": "https://s.wsj.net/public/resources/MWimages/MWGP644_MicroS_ZG_20180906154215.jpg",
+            "publishedAt": "20200904T01:51:00Z",
+            "content": "U.S. stock index futures dipped late Thursday as traders braced for more losses following a sharp selloff during regular trading. As of midnight Eastern, Dow Jones Industrial Average futures\r\n YM00, … [+605 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "BBC News"
+            },
+            "author": "https://www.facebook.com/bbcnews",
+            "title": "France in huge coronavirus recovery plan focusing on green energy  BBC News",
+            "description": "France unveils a 100bneuro plan to kickstart the economy, with a promise to invest in green energy.",
+            "url": "https://www.bbc.com/news/business54009642",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/B7B9/production/_114233074_francerescueplan.jpg",
+            "publishedAt": "20200904T01:42:31Z",
+            "content": "Image copyrightGetty ImagesImage caption\r\n Prime Minister Jean Castex, flanked by education minister JeanMichel Blanquer (L) and economy minister Bruno Le Maire (R)\r\nFrance has unveiled a 100bneuro… [+2688 chars]"
+        },
+        {
+            "source": {
+                "id": "googlenews",
+                "name": "Google News"
+            },
+            "author": null,
+            "title": "Bodycam video in Daniel Prude case shows Rochester police placing hood over Prude  Washington Post",
+            "description": null,
+            "url": "https://news.google.com/__i/rss/rd/articles/CBMiK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9SmhLZUhMZThqMUXSAQA?oc=5",
+            "urlToImage": null,
+            "publishedAt": "20200904T01:07:22Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": "foxnews",
+                "name": "Fox News"
+            },
+            "author": "Paul Steinhauser",
+            "title": "BidenTrump race tightening in the biggest battleground: Poll  Fox News",
+            "description": "A new poll in the biggest of the general election battleground states shows a tightening race but with Democratic presidential nominee Joe Biden with a slight edge over President Trump.",
+            "url": "https://www.foxnews.com/politics/bidentrumpracetighteninginfloridathebiggestbattlegroundpoll",
+            "urlToImage": "https://cfimages.useast1.prod.boltdns.net/v1/static/694940094001/dcd9ab8f57744ef5b739985170527601/55b7dc275b90465582d36b51a007c171/1280x720/match/image.jpg",
+            "publishedAt": "20200904T00:44:36Z",
+            "content": "A new poll in the biggest of the general election battleground states shows a tightening race but with Democratic presidential nominee Joe Biden with a slight edge over President Trump.\r\nTwo months t… [+2595 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "NBCSports.com"
+            },
+            "author": "Kurt Helin",
+            "title": "Spencer Dinwiddie, NBA world reacts to Steve Nash hire in Brooklyn  ProBasketballTalk",
+            "description": "Spencer Dinwiddie told Kyrie Irving \"Ya'll wanted a third star.\"",
+            "url": "https://nba.nbcsports.com/2020/09/03/spencerdinwiddienbaworldreactstostevenashhireinbrooklyn/",
+            "urlToImage": "https://nba.nbcsports.com/wpcontent/uploads/sites/12/2020/09/USATSI_12840245.jpg?resize=1024,743",
+            "publishedAt": "20200904T00:43:00Z",
+            "content": "Kemba Walker‘s craftiness with the dribble creating space to find Daniel Theis for a dunk to put Boston up two 103101 with 0.5 seconds left looked like the dagger that allbut ended Toronto’s season… [+1499 chars]"
+        },
+        {
+            "source": {
+                "id": "cnn",
+                "name": "CNN"
+            },
+            "author": "Annie Grayer, CNN",
+            "title": "Dr. Anthony Fauci says designating quarantine spaces for students who test positive for Covid19 is key to safely opening colleges  CNN",
+            "description": "As schools across the country open to mixed results amid the coronavirus pandemic, Dr. Anthony Fauci laid out how colleges and universities should open successfully  and the conditions that he feels would be necessary for sending his own children onto a col…",
+            "url": "https://www.cnn.com/2020/09/03/us/faucicollegereopeningguidelineswellness/index.html",
+            "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/20090310321601faucicnn0903supertease.jpg",
+            "publishedAt": "20200904T00:27:00Z",
+            "content": "(CNN)As schools across the country open to mixed results amid the coronavirus pandemic, Dr. Anthony Fauci laid out how colleges and universities should open successfully  and the conditions that he… [+2982 chars]"
+        },
+        {
+            "source": {
+                "id": "businessinsider",
+                "name": "Business Insider"
+            },
+            "author": "Morgan McFallJohnsen",
+            "title": "SpaceX: Starlink satellite tests show internet speeds of 100 mbps  Business Insider  Business Insider",
+            "description": "SpaceX's private beta tests are revealing Starlink satellite internet to be quite fast, according to the company.",
+            "url": "https://www.businessinsider.com/spacexstarlinksatellitetestsshowinternetspeedsof100mbps20209",
+            "urlToImage": "https://i.insider.com/5f46972989aff80028ab8183?width=1200&format=jpeg",
+            "publishedAt": "20200903T23:59:01Z",
+            "content": "SpaceX says early tests of its rapidly growing fleet of internetproviding satellites are yielding promising results.\r\nInternal tests of a beta version of internet service from the company's Starlink… [+2362 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Detroit Free Press"
+            },
+            "author": "Brian McCollum",
+            "title": "Big Sean says 'Detroit 2' is a salute to his city's 'undeniable soul,' with aim to inspire  Detroit Free Press",
+            "description": "The rapper's longawaited album, reworked during the pandemic, pays tribute to Detroit with guests such as Eminem, Stevie Wonder and Dave Chappelle.",
+            "url": "https://www.freep.com/story/entertainment/music/brianmccollum/2020/09/03/bigseaninterviewdetroit2eminemsteviewonderhometowntribute/5695539002/",
+            "urlToImage": "https://www.gannettcdn.com/presto/2020/09/03/PDTF/bbad2932c0b6405b824282f8bac85ed5031120_big_sean_rg_07.jpg?crop=2399,1350,x0,y122&width=1600&height=800&fit=bounds",
+            "publishedAt": "20200903T23:53:06Z",
+            "content": "Last SlideNext Slide\r\nIt was all supposed to go down for Big Sean on 313 Day. And then 3/12 happened.\r\nOn March 13 the annual celebration of the Motor City by way of its area code the homegrown rappe… [+10155 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Daily Beast"
+            },
+            "author": "Patricia Kelly Yeo, Blake Montgomery",
+            "title": "Trump Called American War Dead 'Losers' and 'Suckers'  The Daily Beast",
+            "description": "The president reportedly made the remarks ahead of a planned visit to the AisneMarne American Cemetery, which was canceled after he fretted about rain messing up his hair.",
+            "url": "https://www.thedailybeast.com/trumpcalledamericanwardeadlosersandsuckersreport",
+            "urlToImage": "https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_3401,w_6048,x_0,y_583/dpr_2.0/c_limit,w_740/fl_lossy,q_auto/v1599170823/GettyImages1228259139_e1iopk",
+            "publishedAt": "20200903T23:34:00Z",
+            "content": "President Donald Trump called American soldiers who died on French soil during World War I losers during a trip to France in 2018, according to multiple sources cited by The Atlantic. The comments, r… [+3140 chars]"
+        }
+    ]
+}
